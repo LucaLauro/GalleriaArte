@@ -19,14 +19,13 @@ public class Quadro {
     @NotEmpty
 	private String titolo;
     
-    @NotEmpty
+    @NotNull
 	private int anno;
     
     @NotEmpty
 	private String tecnica;
     @NotEmpty
     private String dimensioni;
-    @NotEmpty
     @ManyToOne
 	private Autore autore;
 	
