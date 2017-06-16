@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div>
+    	<p th:text="'Nome: ' + ${autore.nome}" />
+    </div>
+	<div>
+    	<p th:text="'Cognome: ' + ${autore.cognome}" />
+    </div>
+	<div>
+    	<p th:text="'Nazionalità: ' + ${autore.nazionalita}" />	
+    </div>
+	<div>
+    	<p th:text="'Data di nascita: ' + ${autore.dataDiNascita}" />	
+    </div>
+    <div>
+    	<p th:text="'Data di morte: '  + ${autore.dataDiMorte}"/>	
+    </div>
+    <p><a href="/index"> torna al menu principale</a></p>
+</body>
+</html>

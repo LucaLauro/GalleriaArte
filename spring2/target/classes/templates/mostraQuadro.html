@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div>
+    	<p th:text="'Titolo: ' + ${quadro.titolo}" />
+    </div>
+	<div>
+    	<p th:text="'Anno: ' + ${quadro.anno}" />
+    </div>
+	<div>
+    	<p th:text="'Tecnica: ' + ${quadro.tecnica}" />	
+    </div>
+	<div>
+    	<p th:text="'Dimensione: ' + ${quadro.dimensione}" />	
+    </div>
+    <div>
+    	<p th:text="'Autore: '  "/><a href="autore?id=${autore.id}"> ${quadro.autore.nome}</a> 	
+    </div>
+</body>
+</html>
