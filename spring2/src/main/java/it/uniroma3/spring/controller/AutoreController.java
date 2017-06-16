@@ -4,7 +4,9 @@ package it.uniroma3.spring.controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.validation.Valid;
 
@@ -15,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import it.uniroma3.spring.model.Autore;
 import it.uniroma3.spring.service.AutoreService;
@@ -65,5 +68,13 @@ public class AutoreController  {
             autoreservice.add(autore); 
         }
         return "mostraAutore";
+    }
+    @RequestMapping("/autori")
+    public String listaAutore(Model model){
+    	Iterable<Autore> source = this.autoreservice.findAll();
+    	List<Autore> autori = new ArrayList<>();
+    	source.forEach(autori::add);
+    	model.addAttribute("autori",autori);
+    	return"autori";
     }
 }

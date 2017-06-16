@@ -32,7 +32,7 @@
 			<div>
 				<select th:field="*{autore}">
 					<option th:each="autore : ${autori}" th:value="${autore}"
-						th:text="#{${'autore.' + nome}}">autore</option>
+						th:text="${autore.nome}+${autore.cognome}">autore</option>
 				</select>
 			</div>
 			<div>
