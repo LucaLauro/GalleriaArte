@@ -42,9 +42,14 @@ public class QuadroController  {
     									BindingResult bindingResult, Model model) {
     	
         if (bindingResult.hasErrors()) {
+        	Iterable<Autore> source = this.autoreservice.findAll();
+        	List<Autore> autori = new ArrayList<>();
+        	source.forEach(autori::add);
+        	model.addAttribute("autori",autori);
             return "form";
         }
         else {
+        ;
         	model.addAttribute(quadro);
             quadroservice.add(quadro); 
         }

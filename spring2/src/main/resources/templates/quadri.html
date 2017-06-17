@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div class="container">
+	<div th:if="${not #lists.isEmpty(autori)}">
+	<div th:if="${not #lists.isEmpty(quadri)}">
+   <table class="table table-striped">
+      
+      <tr th:each="autori : ${autori}">
+          <div><th th:text="${qutore.nome}"></th></div>
+      </tr>
+      
+      <tr th:each="quadri : ${quadri}">
+         <span th:unless="${autore.id.equals(quadro.id)}"> </span>
+             <div><th th:text="${quadro.nome}"></th></div>
+      </tr>
+    </table>
+  </div>
+  </div>
+   <p><a href="/index"> torna al menu principale</a></p>
+</body>
+</html>

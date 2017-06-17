@@ -26,6 +26,7 @@ public class Quadro {
 	private String tecnica;
     @NotEmpty
     private String dimensioni;
+    @NotNull
     @ManyToOne
 	private Autore autore;
 	

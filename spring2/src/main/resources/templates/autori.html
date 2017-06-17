@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div class="container">
+	<div th:if="${not #lists.isEmpty(autori)}">
+   <table class="table table-striped">
+    <tr> 
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>Nazionalita</th>
+      <th>Anno Di Nascita</th>
+      <th>Anno Di Morte</th>
+    </tr>
+      <tr th:each="autore : ${autori}">
+        <td th:text="${autore.nome}"></td>
+        <td th:text="${autore.cognome}"></td>
+        <td th:text="${autore.nazionalita}"></td>
+        <td th:text="${autore.dataDiNascita}"></td>
+        <td th:text="${autore.dataDiMorte}"></td>
+      </tr>
+    </table>
+  </div>
+  </div>
+   <p><a href="/index"> torna al menu principale</a></p>
+</body>
