@@ -7,12 +7,12 @@
    <table class="table table-striped">
       
       <tr th:each="autori : ${autori}">
-          <div><th th:text="${qutore.nome}"></th></div>
+          <div><th th:text="${qutore.nome}"/></div>
       </tr>
       
       <tr th:each="quadri : ${quadri}">
-         <span th:unless="${autore.id.equals(quadro.id)}"> </span>
-             <div><th th:text="${quadro.nome}"></th></div>
+         <span th:unless="${autore.id.equals(quadro.autore.id)}"> </span>
+             <div><th th:text="${quadro.nome}"/></div>
       </tr>
     </table>
   </div>

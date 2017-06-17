@@ -49,7 +49,6 @@ public class QuadroController  {
             return "form";
         }
         else {
-        ;
         	model.addAttribute(quadro);
             quadroservice.add(quadro); 
         }

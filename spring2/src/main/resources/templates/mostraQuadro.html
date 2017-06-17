@@ -14,7 +14,7 @@
     	<p th:text="'Dimensioni: ' + ${quadro.dimensioni}" />	
     </div>
     <div>
-    	<p th:text="'Autore: '" />	<a href="autore?id=${autore.id}"> <p th:text="${quadro.autore.nome}+' '+${quadro.autore.cognome}"/></a> 	
+    	<p th:text="'Autore: '" />	<a href="autore?id=${quadro.autore.id}"> <p th:text="${quadro.autore.nome}+' '+${quadro.autore.cognome}"/></a> 	
     </div>
     <p><a href="/index"> torna al menu principale</a></p>
 </body>
